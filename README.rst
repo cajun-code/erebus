@@ -6,9 +6,9 @@ C++ Development can be a pain. Project setup is dependent on the tools used in t
 Installation
 ---------------
 
- Install it yourself as:
+Install it yourself as:
 
-    $ gem install cpp_dev_tool
+   $ gem install cpp_dev_tool
 
 Usage
 -----------
