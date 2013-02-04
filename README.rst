@@ -1,26 +1,23 @@
-# CppDevTool
+CppDevTool
+==============
 
-TODO: Write a gem description
+C++ Development can be a pain. Project setup is dependent on the tools used in the project and the developer.  This tool is a command line tool for generating project and files independent of any ide or editor.  
 
-## Installation
+Installation
+---------------
 
-Add this line to your application's Gemfile:
-
-    gem 'cpp_dev_tool'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+ Install it yourself as:
 
     $ gem install cpp_dev_tool
 
-## Usage
+Usage
+-----------
 
-TODO: Write usage instructions here
+..:: Todo: Write usage instructions here
 
-## Contributing
+
+Contributing
+--------------
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)

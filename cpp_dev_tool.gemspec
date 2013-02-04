@@ -8,12 +8,14 @@ Gem::Specification.new do |gem|
   gem.version       = CppDevTool::VERSION
   gem.authors       = ["Allan Davis"]
   gem.email         = ["cajun.code@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{C++ Project and File generators}
+  gem.summary       = %q{C++ Development can be a pain. Project setup is dependent on the tools used in the project and the developer.  This tool is a command line tool for generating project and files independent of any ide or editor.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+  
+  gem.add_dependency "thor", "~> 0.17.0"
 end
