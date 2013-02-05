@@ -1,4 +1,5 @@
 require "cpp_dev_tool/version"
+require "cpp_dev_tool/generator"
 require "thor"
 require "fileutils"
 require 'active_support/core_ext'
@@ -15,10 +16,11 @@ module CppDevTool
           base_name = File.basename(file, File.extname(file))
           # puts "Loading generator: #{base_name}"
           require File.join("cpp_dev_tool", "generators", base_name)
-          clazz = Object.const_get("CppDevTool").const_get("Generators").const_get(base_name.camelize)
+          clazz = Object.const_get(base_name.camelize)
           # puts clazz.desc
           # subcommand base_name, clazz
-          Thor.subcommand base_name, clazz
+          #App.subcommand base_name, clazz
+          App.register(clazz, base_name, clazz.usuage, clazz.desc)
         end
       end
     end
