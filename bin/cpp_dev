@@ -1,0 +1,10 @@
+#! /usr/bin/env ruby
+require "bundler/setup"
+
+path = File.absolute_path(File.join(File.dirname(__FILE__), "..", "lib"))
+
+$LOAD_PATH << path
+
+require "cpp_dev_tool"
+
+CppDevTool::App.start(ARGV)

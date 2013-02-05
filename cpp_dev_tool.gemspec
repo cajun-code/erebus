@@ -21,4 +21,5 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'activesupport', "~> 3.2.11"
   gem.add_dependency 'i18n',"~> 0.6.1"
   gem.add_dependency "multi_json", "~> 1.5.0"
+  gem.add_development_dependency "pry"
 end
