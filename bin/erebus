@@ -5,7 +5,7 @@ path = File.absolute_path(File.join(File.dirname(__FILE__), "..", "lib"))
 
 $LOAD_PATH << path
 
-require "cpp_dev_tool"
+require "erebus"
 
-CppDevTool::App.load_generators
-CppDevTool::App.start(ARGV)
+Erebus::App.load_generators
+Erebus::App.start(ARGV)
