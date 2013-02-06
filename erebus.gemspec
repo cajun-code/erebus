@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["cajun.code@gmail.com"]
   gem.description   = %q{C++ Project and File generators}
   gem.summary       = %q{C++ Development can be a pain. Project setup is dependent on the tools used in the project and the developer.  This tool is a command line tool for generating project and files independent of any ide or editor.}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/cajun-code/erebus"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
