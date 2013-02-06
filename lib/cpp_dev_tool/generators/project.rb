@@ -11,7 +11,15 @@ class Project < CppDevTool::Generator
   def create_rake_file
     template "templates/rake.erb", "#{class_name}/Rakefile"
   end
-      
+  def create_git_ignore
+    template "templates/ignore.erb", "#{class_name}/.gitignore"
+  end
+  def create_include_dir
+    create_file "#{class_name}/include/.gitkeep"
+  end
+  def create_main_file
+    template "templates/main.cpp.erb", "#{class_name}/src/main.cpp"
+  end
   private 
   def class_name
     name.camelize

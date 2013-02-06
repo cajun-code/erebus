@@ -7,4 +7,5 @@ $LOAD_PATH << path
 
 require "cpp_dev_tool"
 
+CppDevTool::App.load_generators
 CppDevTool::App.start(ARGV)

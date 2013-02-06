@@ -6,8 +6,7 @@ require 'active_support/core_ext'
 module CppDevTool
   # Your code goes here...
   class App < Thor
-    def initialize(args, opts, config)
-      super(args, opts, config)
+    def self.load_generators
       lib_dir = File.absolute_path(File.join(File.dirname(__FILE__), "cpp_dev_tool", "generators"))
       # puts "Lib Directory #{lib_dir}"
       Dir.foreach(lib_dir) do |file|
@@ -23,7 +22,9 @@ module CppDevTool
           App.register(clazz, base_name, clazz.usuage, clazz.desc)
         end
       end
+      puts "Generators are loaded"
     end
   end
 end
+
 
