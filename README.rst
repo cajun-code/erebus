@@ -13,8 +13,29 @@ Install it yourself as:
 Usage
 -----------
 
-..:: Todo: Write usage instructions here
+To create a new C++ project:
 
+   erebos project NAME
+
+To see a list of tasks erebus can do:
+
+   erebos
+
+To create a header file:
+
+    erebos header NAME
+
+To create a C++ source file:
+
+    erebos source NAME
+    
+To create a C source file:
+
+    erebos source NAME --ext c
+    
+To generate a C++ class:
+    
+    erebos cpp_class NAME
 
 Contributing
 --------------
