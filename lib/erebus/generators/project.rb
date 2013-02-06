@@ -20,5 +20,9 @@ class Project < Erebus::NamedGenerator
     template "templates/main.cpp.erb", "#{class_name}/src/main.cpp"
   end
   
+  def create_erebus_file
+    template "templates/project.erebus.erb", "#{class_name}/.erebus"
+  end
+  
 end
   
