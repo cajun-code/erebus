@@ -22,7 +22,6 @@ module CppDevTool
           App.register(clazz, base_name, clazz.usuage, clazz.desc)
         end
       end
-      puts "Generators are loaded"
     end
   end
 end

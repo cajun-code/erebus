@@ -1,9 +1,8 @@
 require "cpp_dev_tool/generator"
 
-class Project < CppDevTool::Generator
+class Project < CppDevTool::NamedGenerator
   desc "Create a C/C++ Project"
-  argument :name
-      
+  
   def self.source_root
     File.dirname(__FILE__)
   end
@@ -20,9 +19,6 @@ class Project < CppDevTool::Generator
   def create_main_file
     template "templates/main.cpp.erb", "#{class_name}/src/main.cpp"
   end
-  private 
-  def class_name
-    name.camelize
-  end 
+  
 end
   
