@@ -1,6 +1,11 @@
 require "thor"
 
 module Erebus
+  
+  class ErebusError < StandardError
+  end
+  
+  
   class Generator < Thor::Group 
     include Thor::Actions
     
@@ -15,7 +20,12 @@ module Erebus
     def user
       ENV["USER"]
     end
+    
+    def self.validate_project
+      fail ErebusError.new "Please go inside the project directory to run this command" if !File.exists? ".erebus"
+    end
   end
+  
   
   class NamedGenerator < Generator
     argument :name

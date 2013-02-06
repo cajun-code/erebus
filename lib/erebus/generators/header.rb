@@ -5,11 +5,14 @@ class Header < Erebus::NamedGenerator
   
   class_option :ext,:type => :string ,:default => "h", :desc => "Extention used for the header"
   
+  
+  
   def self.source_root
     File.dirname(__FILE__)
   end
   
   def create_header_file
+    Header.validate_project
     template "templates/blank.erb", "include/#{file_name}.#{ext}"
   end
   
