@@ -1,6 +1,6 @@
-require "cpp_dev_tool/generator"
+require "erebus/generator"
 
-class CppClass < CppDevTool::NamedGenerator
+class CppClass < erebus::NamedGenerator
   desc "Create a C/C++ Class"
   
   #class_option :ext,:type => :string ,:default => "cpp", :desc => "Extention used for the source file"

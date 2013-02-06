@@ -1,6 +1,6 @@
-require "cpp_dev_tool/generator"
+require "erebus/generator"
 
-class Project < CppDevTool::NamedGenerator
+class Project < Erebus::NamedGenerator
   desc "Create a C/C++ Project"
   
   def self.source_root

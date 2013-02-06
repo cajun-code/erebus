@@ -1,9 +1,9 @@
-require "cpp_dev_tool/version"
-require "cpp_dev_tool/generator"
+require "erebus/version"
+require "erebus/generator"
 require "thor"
 require "fileutils"
 require 'active_support/core_ext'
-module CppDevTool
+module Erebus
   # Your code goes here...
   class App < Thor
     def self.load_generators

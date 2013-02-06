@@ -1,6 +1,6 @@
 require "thor"
 
-module CppDevTool
+module Erebus
   class Generator < Thor::Group 
     include Thor::Actions
     

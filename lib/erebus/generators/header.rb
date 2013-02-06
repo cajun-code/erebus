@@ -1,6 +1,6 @@
-require "cpp_dev_tool/generator"
+require "erebus/generator"
 
-class Header < CppDevTool::NamedGenerator
+class Header < Erebus::NamedGenerator
   desc "Create a C/C++ header file"
   
   class_option :ext,:type => :string ,:default => "h", :desc => "Extention used for the header"

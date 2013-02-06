@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'cpp_dev_tool/version'
+require 'erebus/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "cpp_dev_tool"
-  gem.version       = CppDevTool::VERSION
+  gem.name          = "erebus"
+  gem.version       = Erebus::VERSION
   gem.authors       = ["Allan Davis"]
   gem.email         = ["cajun.code@gmail.com"]
   gem.description   = %q{C++ Project and File generators}
