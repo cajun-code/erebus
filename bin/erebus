@@ -1,5 +1,5 @@
 #! /usr/bin/env ruby
-require "bundler/setup"
+#require "bundler/setup"
 
 path = File.absolute_path(File.join(File.dirname(__FILE__), "..", "lib"))
 
