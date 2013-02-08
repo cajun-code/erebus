@@ -1,6 +1,6 @@
 require "erebus/generator"
 require "erebus/actions/zip_file"
-class SetupTest < Erebus::Generator
+class SetupTest < Erebus::NamedGenerator
   desc "Add testing framework Igloo to project"
   
   include Erebus::Actions::ZipFile
@@ -10,20 +10,21 @@ class SetupTest < Erebus::Generator
   end
   
   def get_test_framework
-    SetupTest.validate_project
-    get "https://github.com/joakimkarlsson/igloo/archive/master.zip", "lib/igloo.zip"
-    extract "lib/igloo.zip",  "lib"
-    remove_file "lib/igloo.zip"
+    #SetupTest.validate_project
+    get "https://github.com/joakimkarlsson/igloo/archive/master.zip", "#{class_name}/lib/igloo.zip"
+    say_status :extracting, "#{class_name}/lib/igloo.zip"
+    extract "#{class_name}/lib/igloo.zip",  "#{class_name}/lib"
+    remove_file "#{class_name}/lib/igloo.zip"
   end
   
   def create_test_runner
-    template "templates/spec_runner.cpp.erb", "spec/runner.cpp"
+    template "templates/spec_runner.cpp.erb", "#{class_name}/spec/runner.cpp"
   end
   
   def append_rake_command
-    if !File.exist?("test.rake")
-      template "templates/rake_test.erb", "test.rake"
-      append_file "Rakefile", 'import "test.rake"'
+    if !File.exist?("#{class_name}/test.rake")
+      template "templates/rake_test.erb", "#{class_name}/test.rake"
+      append_file "#{class_name}/Rakefile", 'import "test.rake"'
     end
   end
 end

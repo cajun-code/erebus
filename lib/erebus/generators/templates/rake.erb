@@ -33,3 +33,4 @@ desc "Run the app"
 task :run => [:clean, :build] do
   system "#{File.join(PROJECT_DIR, "build")}/#{APP_NAME}"
 end
+
