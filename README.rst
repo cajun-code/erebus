@@ -13,13 +13,21 @@ Install it yourself as:
 Usage
 -----------
 
-To create a new C++ project:
-
-   erebos project NAME
-
 To see a list of tasks erebus can do:
 
    erebos
+
+To create a new C++ project:
+
+   erebos project NAME
+   
+To create a new C++ project without Tests:
+
+   erebos project NAME --no-testing
+
+To add Igloo Testing to an existing project:
+
+   erebos setup_test .
 
 To create a header file:
 
@@ -28,7 +36,11 @@ To create a header file:
 To create a C++ source file:
 
     erebos source NAME
-    
+
+To create a Igloo Test Spec: 
+
+    erebos spec <Name of the class to test>
+
 To create a C source file:
 
     erebos source NAME --ext c
@@ -36,6 +48,10 @@ To create a C source file:
 To generate a C++ class:
     
     erebos cpp_class NAME
+
+To generate a C++ class without Tests:
+    
+    erebos cpp_class NAME --no-testing
 
 Contributing
 --------------
