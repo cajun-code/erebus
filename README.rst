@@ -40,6 +40,8 @@ To generate a C++ class:
 Contributing
 --------------
 
+Project tracking is on a Pivotal Tracker Project https://www.pivotaltracker.com/projects/751383
+
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
