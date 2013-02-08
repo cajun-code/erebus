@@ -1,0 +1,16 @@
+#include <igloo/igloo_alt.h>
+#include "<%= "#{file_name}.h" %>"
+using namespace igloo;
+
+Describe(<%= class_name %>)
+{
+  bool its_true; 
+
+  An_entity() : its_true(true) {}
+
+  It(should_do_something)
+  {
+    Assert::That(its_true, IsTrue());
+  }
+
+};
