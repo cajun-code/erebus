@@ -1,10 +1,13 @@
+// Using Igloo see http://www.igloo-testing.org for information about Assertions
 #include <igloo/igloo.h>
 #include "<%= "#{file_name}.h" %>"
 
 using namespace igloo;
 
 
-Context(<%= class_name %>){
+Context(<%= "#{class_name}Spec" %>){
+ 
+  <%= "#{class_name} #{file_name};"%> 
   void SetUp(){
 	  // Setup test 
   }

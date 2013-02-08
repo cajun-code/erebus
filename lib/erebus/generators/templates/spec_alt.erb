@@ -1,16 +1,18 @@
+// Using Igloo see http://www.igloo-testing.org for information about Assertions
+
 #include <igloo/igloo_alt.h>
 #include "<%= "#{file_name}.h" %>"
 using namespace igloo;
 
-Describe(<%= class_name %>)
+ 
+Describe(<%= "#{class_name}Spec" %>)
 {
-  bool its_true; 
+  <%= "#{class_name} #{file_name};"%> 
 
-  An_entity() : its_true(true) {}
 
   It(should_do_something)
   {
-    Assert::That(its_true, IsTrue());
+    
   }
 
 };

@@ -24,7 +24,7 @@ class SetupTest < Erebus::NamedGenerator
   def append_rake_command
     if !File.exist?("#{class_name}/test.rake")
       template "templates/rake_test.erb", "#{class_name}/test.rake"
-      append_file "#{class_name}/Rakefile", 'import "test.rake"'
+      append_file "#{class_name}/Rakefile", "\nimport \"test.rake\""
     end
   end
 end
