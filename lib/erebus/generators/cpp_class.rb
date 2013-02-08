@@ -7,6 +7,8 @@ class CppClass < Erebus::NamedGenerator
   
   #class_option :ext,:type => :string ,:default => "cpp", :desc => "Extention used for the source file"
   
+  class_option :testing, :type => :boolean, :default => true
+  
   def self.source_root
     File.dirname(__FILE__)
   end
@@ -17,6 +19,12 @@ class CppClass < Erebus::NamedGenerator
   end
   def create_source_file
     template "templates/class.cpp.erb", "src/#{file_name}.cpp"
+  end
+  
+  def add_testing_framework
+    if options[:testing]
+      invoke "spec", ["#{class_name}"]
+    end
   end
   
   private

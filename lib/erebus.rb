@@ -3,6 +3,8 @@ require "erebus/generator"
 require "thor"
 require "fileutils"
 require 'active_support/core_ext'
+require "erebus/core_ext/net_http_patch"
+
 module Erebus
   # Your code goes here...
   class App < Thor
