@@ -10,7 +10,8 @@ module Erebus
     include Thor::Actions
     
     def self.usuage
-      "#{self_task.formatted_usage(self, false)}"
+      #"#{self_task.formatted_usage(self, false)}"
+      self.help(Thor::Base.shell.new)
     end
     
     protected
